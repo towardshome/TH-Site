@@ -1,0 +1,18 @@
+{{ partial "header-ni.html" . }}
+<section class="mw8 mw8-ns mw7-m mw7-l  center pa3">
+
+<!-- 
+	<h2 class="">
+		Posts in the '{{ .Title }}' category.
+	</h2>
+ -->
+
+	{{ range .Data.Pages }}
+	<h2>
+		<a class="INlink  dib mr3" href="{{ .Permalink }}">{{ .Title }}</a>
+	</h2>
+	{{ .Render "summary"}} {{ end }}
+
+</section>
+{{ partial "pre-footer.html" . }}
+{{ partial "footer.html" . }}

@@ -1,0 +1,23 @@
+{{ partial "header.html" . }} 
+<section class="mw8 mw8-ns mw7-m mw7-l center pa3">
+	<div>
+<!-- 
+		<h2 class="">
+			{{ .Title }}
+		</h2>
+ -->
+				<h2 class="">
+List of articles
+		</h2>
+		{{ range .Data.Pages.GroupByDate "2006" }} 
+		<h3 class="">
+			{{ .Key }}
+		</h3>
+		<ul class="list pnl">
+			{{ range .Pages }} {{ .Render "li"}} {{ end }} 
+		</ul>
+		{{ end }} 
+	</div>
+</section>
+
+{{ partial "pre-footer.html" . }} {{ partial "footer.html" . }} 

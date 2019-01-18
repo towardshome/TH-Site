@@ -1,0 +1,37 @@
+<div class="pl2 pt1 pb1 mbox">
+
+<p class="f6 mr4 mtext">
+<!-- 
+Posted on {{ .Date.Format "2 January 2006" }} by {{.Site.Params.author}}. 
+ -->
+Posted on {{ .Date.Format "2 January 2006" }} by {{.Site.Params.author}}. 
+</p>
+
+
+<div class="pr3">
+  <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+<script type="IN/Share"></script>
+<!-- <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> -->
+</div>
+
+
+<p class="f6 mtext">
+Tags: 
+{{ range .Params.tags }}
+<a class="mr1 mtext normal-l" 
+href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+{{ end }}
+Categories: 
+{{ range .Params.categories }}
+<a class="f6 mr1 mtext normal-l" 
+href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+{{ end }}
+</p>
+</div>
+
+
+
+
+
+

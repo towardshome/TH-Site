@@ -1,0 +1,33 @@
+{{ partial "header.html" . }} 
+<section class="mw8 mw8-ns mw7-m mw7-l center pa3">
+<!-- 
+	<h2 class="">
+		Recent Posts 
+	</h2>
+ -->
+	{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }} {{ range $paginator.Pages }} {{ if eq .Type "post"}} 
+	<h2 class="">
+		<h2>
+			<a class="INilink" href="{{ .RelPermalink }}">
+				{{ .Title }}
+			</a>
+		</h2>
+	</h2>
+	{{ .Render "summary"}} {{ end }} {{ end }} 
+	<p class="tc pa3 pa4-ns">
+		{{if .Paginator.HasPrev }} 
+		<a class="INlink" href="{{ .Paginator.Prev.URL }}">
+			&laquo; Previous
+		</a>
+		| {{ end }} 
+		<span>
+			Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+		</span>
+		{{ if .Paginator.HasNext }} | 
+		<a class="INlink" href="{{ .Paginator.Next.URL }}">
+			Next &raquo;
+		</a>
+		{{ end }} 
+	</p>
+</section>
+{{ partial "pre-footer.html" . }} {{ partial "footer.html" . }} 

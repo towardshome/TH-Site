@@ -1,0 +1,12 @@
+{{ partial "header-ni.html" . }} 
+<section class="btIN mw8 mw8-ns mw7-m mw7-l center bg-IN pa3">
+	<h1 class="">
+		{{ .Title }} 
+	</h1>
+	<ul class="list pnl">
+		{{ $data := .Data }} {{ range $key, $value := .Data.Terms }} 
+		<li class="dib mr2"><a href="{{ $key | urlize }} " class="fin db pa2 link dim">{{ $key }}({{ len $value }})</a></li>
+		{{ end }} 
+	</ul>
+</section>
+{{ partial "pre-footer.html" . }} {{ partial "footer.html" . }}

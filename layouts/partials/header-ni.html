@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title> {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }} </title>
+    <meta name="robots" content="noindex">
+	<meta name="author" content="{{.Site.Params.author}}">
+	<meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }}{{ .Description }}{{ end }}">
+	<meta name="keywords" content="{{ delimit .Keywords " , " }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/tachyons.min.css">
+<!--     Add code for rss -->
+	{{ if .RSSLink }} 
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{ end }} {{ template "_internal/google_analytics.html" . }} 
+</head>
+<body class="bg-IN INtext mw-100 sans-serif">
+<header class="tc pal">
+	{{ partial "titlebar.html" . }} 
+</header>

@@ -1,0 +1,44 @@
+baseurl = "http://www.quietsilence.net"
+preserveTaxonomyNames = "false"
+enableRobotsTXT = "false"
+
+# Google Analytics
+googleAnalytics = " "
+
+# Site title
+title = "Towards Home"
+
+# Copyright message
+copyright = "Copyright © 2018 Towards Home"
+
+# Language
+languageCode = "en"
+
+# Metadata format
+# "yaml", "toml", "json"
+metaDataFormat = "yaml"
+
+# Pagination
+paginate = 5
+paginatePath = "page"
+
+# Enable Disqus integration
+disqusShortname = " "
+
+[permalinks]
+    post = "/:filename/"
+    page = "/:filename/"
+    code = "/:slug/"
+
+[taxonomies]
+	tag = "tags"
+	category = "categories"
+
+
+[author]
+    name = "Simon W Jones"
+    email = "swj@quietsilence.ent"
+
+[params]
+description = "May the road rise to meet you."
+author = "SWJ"

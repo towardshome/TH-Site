@@ -1,0 +1,32 @@
+{{ partial "header.html" . }} 
+<div id="index" class="mw8 mw8-ns mw7-m mw7-l center pa3">
+{{ range (.Paginator 3).Pages }}     
+    <article class="post">
+
+        <h2><a class="black no-underline"href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+        <div class="post-content">
+            				{{ .Content }} {{ partial "post-tags.html" . }} 
+        </div>
+
+    </article>
+{{ end }}
+</div>
+<div class="tc">
+<p>
+{{ if .Paginator.HasPrev }}
+    <a class="btn btn-default" href="{{ .Paginator.Prev.URL }}">
+        < Previous Page
+    </a>
+{{ end }}
+&nbsp;&nbsp;
+{{ if .Paginator.HasNext }}
+    <a class="btn btn-default" href="{{ .Paginator.Next.URL }}">
+        Next Page >
+    </a>
+</p>
+
+</div>
+{{ end }}
+{{ partial "pre-footer.html" . }}
+{{ partial "footer.html" . }} 
