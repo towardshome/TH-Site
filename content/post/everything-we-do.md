@@ -9,7 +9,7 @@ tags:
   - "integrity"
 categories:
   - ""
-draft: false
+draft: true
 ---
 There is a saying, often attributed to the [Lakota people](https://en.wikipedia.org/wiki/Lakota_people) that goes something like this: 
 
