@@ -1,4 +1,4 @@
-baseurl = "http://www.quietsilence.net"
+baseurl = "https://stoic-keller-4ab1ce.netlify.com/"
 preserveTaxonomyNames = "false"
 enableRobotsTXT = "false"
 
@@ -36,8 +36,8 @@ disqusShortname = " "
 
 
 [author]
-    name = "Simon W Jones"
-    email = "swj@quietsilence.ent"
+    name = "SWJ"
+    email = "swj@towardshome.net"
 
 [params]
 description = "May the road rise to meet you."
