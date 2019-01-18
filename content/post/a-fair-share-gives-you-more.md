@@ -8,7 +8,7 @@ tags:
   - "fair share"
 categories:
   - "Consumption"
-draft: false
+draft: true
 ---
 I've been thinking about [my last post](/unmindful-consumption) on unmindful consumption. 
 
